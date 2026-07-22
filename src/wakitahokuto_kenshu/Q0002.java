@@ -1,4 +1,4 @@
-//wakitahokuto_kenshuというパッケージを宣言
+//wakitahokuto_kenshuというパッケージの作成を宣言
 package wakitahokuto_kenshu;
 
 //どこからでもアクセス可能なクラスであるQ0002を作成
