@@ -1,9 +1,11 @@
 package wakitahokuto_kenshu;
 
-//javaの用意するtextパッケージにあるSimpleDateFormatクラスを使えるようにする
-import java.text.SimpleDateFormat;
+
 //javaが用意しているutilパッケージにあるCalendarクラスを使えるようにする
 import java.util.Calendar;
+
+//javaの用意するtextパッケージにあるSimpleDateFormatクラスを使えるようにする
+import java.text.SimpleDateFormat;
 
 public class Q0007 {
 
