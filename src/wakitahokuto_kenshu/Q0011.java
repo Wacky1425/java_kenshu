@@ -13,8 +13,14 @@ public class Q0011 {
 		//変数sumにaとbの和を代入する。
 		sum = a + b;
 		
+		dif = a - b;
+		
+		pro = a * b;
+		
+		quo = a / b;
+		
 		//変数sumの値を標準出力する。
-		System.out.println(sum);
+		System.out.print(sum + "," + dif + "," + pro + "," + quo);
 
 	}
 
