@@ -20,24 +20,15 @@ public class Q0021 {
 			Random rand = new Random();
 			
 			
-			int a=rand.nextInt(3);
+			int a=rand.nextInt(3), b=rand.nextInt(3);
 			
 			
-			int b=rand.nextInt(3);
-			
-			
-			boolean aiko_flag = false;
-			
-			
-			System.out.println(i + "回目" + " Aさん" + hand(a) + " Bさん" + hand(b) + " 勝者：" + winner(a,b,a_flag,aiko_flag));
+			System.out.println(i + "回目" + " Aさん" + hand(a) + " Bさん" + hand(b) + " 勝者：" + winner(a,b,a_flag));
 		}	
 	}
 	
 	//ハンドが何にあたるかを文字として返す関数
 	private static String hand(int a) {
-		
-		
-		String ans = null;
 		
 		
 		switch (a) {
@@ -46,110 +37,88 @@ public class Q0021 {
 		case 0:
 			
 			
-			ans = "パー";
-			
-			
-			break;
+			return "パー";
 			
 			
 		case 1:
 			
 			
-			ans = "チョキ";
-			
-			
-			break;
+			return "チョキ";
 			
 			
 		case 2:
 			
 			
-			ans = "グー";
+			return "グー";
 		}
 		
 		
-		return ans;
+		return null;
 	}
 			
 	//勝者を返す関数
-	private static String winner(int a, int b, int[] a_flag, boolean aiko_flag) {
+	private static String winner(int a, int b, int[] a_flag) {
 		
 		
-				switch(Math.abs(a-b)) {
+		switch(Math.abs(a-b)) {
+		
+		
+			case 1:
 				
 				
-					case 1:
-						
-						
-						if(a>b) {
-							
-							
-							a_flag[0] = 0;
-							
-							
-						}else {
-							
-							
-							a_flag[0]++;
-							
-							
-						}
-						
-						
-						break;
-						
-						
-					case 0:
-						
-						
-						a_flag[0] = 0;
-						
-						
-						aiko_flag = true;
-						
-						
-						break;
-						
-						
-					case 2:
-						
-						
-						if(a>b) {
-							
-							
-							a_flag[0]++;
-							
-							
-						}else {
-							
-							
-							a_flag[0] = 0;
-						}
-				}
-				
-				
-				String winner;
-				
-				
-				if(aiko_flag) {
+				if(a>b) {
 					
 					
-					winner = "なし";
+					a_flag[0] = 0;
 					
 					
-				}else if(a_flag[0] == 0){
+					return "Aさん";
 					
 					
-					winner = "Aさん";
-					
-									
 				}else {
 					
 					
-					winner = "Bさん";
+					a_flag[0]++;
+					
+					
+					return "Bさん";
+					
+					
 				}
 				
 				
-				return winner;
+			case 0:
+				
+				
+				a_flag[0] = 0;
+				
+				
+				return "なし";
+				
+				
+			case 2:
+				
+				
+				if(a>b) {
+					
+					
+					a_flag[0]++;
+					
+					
+					return "Bさん";
+					
+					
+				}else {
+					
+					
+					a_flag[0] = 0;
+					
+					
+					return "Aさん";
+				}
+		}
+		
+		
+		return null;
 	}
 }
