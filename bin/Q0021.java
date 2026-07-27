@@ -1,12 +1,8 @@
-
 package wakitahokuto_kenshu;
-
 
 import java.util.Random;
 
-
 public class Q0021 {
-
 	
 	public static void main(String[] args) {
 		
