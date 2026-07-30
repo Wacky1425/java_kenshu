@@ -7,7 +7,7 @@ public class Q0001 {
 //どこからでもアクセス可能な、Q0001自体に属する、処理完了後に呼び出し元に渡す結果やデータがない、入力値を要素が文字列の配列(args)で受け取る、Q0001が呼ばれたときに最初に呼ばれる処理
 	public static void main(String[] args) {
 		
-		//javaに実装されている入出力およびエラー出力に関する処理群から、出力を指定し、HelloWorldをコンソールへ出力して改行する。
+		//javaに実装されている入出力およびエラー出力に関する処理群の中の、出力処理を指定して、HelloWorldをコンソールへ出力して改行する。
 		System.out.println("Hello World");
 		
 		
